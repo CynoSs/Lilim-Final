@@ -139,15 +139,28 @@ client.on("message", message => {
 
 });
 
-if (command==="cry"){
+/*if (command==="cry"){
   var cry=["https://media.giphy.com/media/yarJ7WfdKiAkE/giphy.gif","https://media.giphy.com/media/zQnzQCW8IhjkA/giphy.gif","https://media.giphy.com/media/11N961lfRaZWfu/giphy.gif"];
-  var pic=Math.floor((Math.random() * kill.length))
+  var pic=Math.floor((Math.random() * cry.length))
   let xuser=message.mentions.users.first();
   if(!xuser) return message.channel.send(message.author.username+"testing...");
   const xembed= new Discord.RichEmbed()
   .setDescription(message.author.username+"se puso a llorar")
   .setImage(cry[pic]);
   message.channel.send(xembed);
-};
+};*/
+
+client.on("message", message => {
+  var cry = ["https://media.giphy.com/media/yarJ7WfdKiAkE/giphy.gif","https://media.giphy.com/media/zQnzQCW8IhjkA/giphy.gif","https://media.giphy.com/media/11N961lfRaZWfu/giphy.gif"];
+  var aleatorio = Math.floor(Math.random()*(cry.length));
+  if(message.content.startsWith("-cry")){
+    const xembed= new Discord.RichEmbed()
+    .setDescription(message.author.username+"se puso a llorar")
+    .setImage(cry[pic]);
+    message.channel.send(xembed);
+    //message.channel.send(cry[aleatorio]);
+}
+
+});
 
  client.login("NzQ5ODAzNjczMDA1MDY0MjEy.X0xTFg.NPcMDJlmHUJmuSwpXnQmyjEwLys");
