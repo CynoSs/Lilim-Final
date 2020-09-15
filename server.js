@@ -137,16 +137,17 @@ client.on("message", message => {
     message.channel.send(Mensajes[aleatorio]);
 }
 
+});
+
 if (command==="cry"){
-  var cry=["https://media.giphy.com/media/yarJ7WfdKiAkE/giphy.gif","https://media.giphy.com/media/zQnzQCW8IhjkA/giphy.gif","https://media.giphy.com/media/11N961lfRaZWfu/giphy.gif"]
+  var cry=["https://media.giphy.com/media/yarJ7WfdKiAkE/giphy.gif","https://media.giphy.com/media/zQnzQCW8IhjkA/giphy.gif","https://media.giphy.com/media/11N961lfRaZWfu/giphy.gif"];
   var pic=Math.floor((Math.random() * kill.length))
-  let xuser=message.mentions.users.first()
-  if(!xuser) return message.channel.send(message.author.username+"testing...")
+  let xuser=message.mentions.users.first();
+  if(!xuser) return message.channel.send(message.author.username+"testing...");
   const xembed= new Discord.RichEmbed()
   .setDescription(message.author.username+"se puso a llorar")
-  .setImage(cry[pic])
-  message.channel.send(xembed)
-}
+  .setImage(cry[pic]);
+  message.channel.send(xembed);
+};
 
-});
  client.login("NzQ5ODAzNjczMDA1MDY0MjEy.X0xTFg.NPcMDJlmHUJmuSwpXnQmyjEwLys");
