@@ -156,7 +156,7 @@ client.on("message", message => {
   if(message.content.startsWith("-cry")){
     const xembed= new Discord.RichEmbed()
     .setDescription(message.author.username+"se puso a llorar")
-    .setImage(cry[pic]);
+    .setImage(cry[aleatorio]);
     message.channel.send(xembed);
     //message.channel.send(cry[aleatorio]);
 }
